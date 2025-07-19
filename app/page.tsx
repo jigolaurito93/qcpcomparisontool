@@ -1,7 +1,7 @@
 'use client';
 
-import { useRef } from "react";
-import React from "react";
+import { useRef } from 'react';
+import React from 'react';
 
 export default function Navbar() {
   const reweldRef = useRef<HTMLTextAreaElement>(null);
@@ -21,7 +21,7 @@ export default function Navbar() {
       <section className="space-y-4">
         <h2 className="text-xl font-semibold">Reweld Frame QCP</h2>
         <p>
-          When pulling up QCP data for <strong>"Reweld Frame QCP"</strong>, you can paste all of the following <strong>Parameter IDs</strong> into the <strong>"Para." filter</strong> at once in the QCP pop-up screen. There's no need to separate them with commas. After pasting, simply check the boxes.
+          When pulling up QCP data for <strong>&quot;Reweld Frame QCP&quot;</strong>, you can paste all of the following <strong>Parameter IDs</strong> into the <strong>&quot;Para.&quot; filter</strong> at once in the QCP pop-up screen. There&#39;s no need to separate them with commas. After pasting, simply check the boxes.
         </p>
 
         <div className="space-y-2 bg-gray-100 h-full w-full max-w-2xl p-4 rounded">
@@ -46,10 +46,10 @@ export default function Navbar() {
         </div>
 
         <ol className="list-decimal list-inside space-y-1">
-          <li>Sort the results by <strong>"Eqp. Name"</strong>.</li>
-          <li>Copy the values from <strong>top to bottom</strong> and paste them into the <strong>"MES Parameter Values"</strong> input field. (No commas needed)</li>
-          <li>Go to the Excel sheet, copy the values for the <strong>same LOT ID</strong>, and paste them into the <strong>"Excel Parameter Values"</strong> input field. (No commas needed)</li>
-          <li>Click the <strong>"Compare"</strong> button.</li>
+          <li>Sort the results by <strong>&quot;Eqp. Name&quot;</strong>.</li>
+          <li>Copy the values from <strong>top to bottom</strong> and paste them into the <strong>&quot;MES Parameter Values&quot;</strong> input field. (No commas needed)</li>
+          <li>Go to the Excel sheet, copy the values for the <strong>same LOT ID</strong>, and paste them into the <strong>&quot;Excel Parameter Values&quot;</strong> input field. (No commas needed)</li>
+          <li>Click the <strong>&quot;Compare&quot;</strong> button.</li>
           <li>You will see whether the MES and Excel values match.</li>
         </ol>
       </section>
@@ -58,13 +58,13 @@ export default function Navbar() {
       <section className="space-y-4">
         <h2 className="text-xl font-semibold">EOL Rework QCP</h2>
         <p>
-          The same instructions apply to <strong>"EOL Rework QCP"</strong>. Paste these <strong>Parameter IDs</strong> into the <strong>"Para." filter</strong> all at once. There's no need to separate them with commas.
+          The same instructions apply to <strong>&quot;EOL Rework QCP&quot;</strong>. Paste these <strong>Parameter IDs</strong> into the <strong>&quot;Para.&quot; filter</strong> all at once. There&#39;s no need to separate them with commas.
         </p>
 
         <div className="space-y-2 bg-gray-100 w-full max-w-2xl p-4 rounded">
           <div className="flex justify-end">
             <button
-              onClick={() => handleCopy(reweldRef.current)}
+              onClick={() => handleCopy(eolRef.current)}
               className="px-4 py-2 bg-slate-500 text-white rounded hover:bg-blue-600 transition"
             >
               Copy
