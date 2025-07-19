@@ -2,6 +2,13 @@
 
 import React, { useState } from "react";
 
+interface ComparisonResult {
+    key: string;
+    val1: string;
+    val2: string;
+    status: string;
+  }
+  
 const PARAM_IDS_DATA1 = [
     "8575TEM0030P", "8575INF0390P", "8575TEM0010P", "8575TEM0011P",
     "8575TEM0020P", "8575CNT0010P", "8575INF0400P", "8575INF0280P",
@@ -21,7 +28,7 @@ const PARAM_IDS_DATA2 = [
 export default function EOL() {
     const [values1Raw, setValues1Raw] = useState("");
     const [values2Raw, setValues2Raw] = useState("");
-    const [results, setResults] = useState<any[] | null>(null);
+    const [results, setResults] = useState<ComparisonResult[] | null>(null);
 
     const parseLines = (raw: string) =>
         raw

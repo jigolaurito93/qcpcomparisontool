@@ -2,6 +2,13 @@
 
 import React, { useState } from "react";
 
+interface ComparisonResult {
+    key: string;
+    val1: string;
+    val2: string;
+    status: string;
+  }
+
 const PARAM_IDS_DATA1 = [
     "8545LEN0630P", "8545LEN0640P", "8545LEN0650P", "8545LEN0660P",
     "8545LEN0670P", "8545LEN0680P", "8545LEN0690P", "8545LEN0700P",
@@ -23,7 +30,7 @@ const PARAM_IDS_DATA2 = [
 export default function Reweld() {
     const [values1Raw, setValues1Raw] = useState("");
     const [values2Raw, setValues2Raw] = useState("");
-    const [results, setResults] = useState<any[] | null>(null);
+    const [results, setResults] = useState<ComparisonResult[] | null>(null);
 
     const parseLines = (raw: string) =>
         raw
